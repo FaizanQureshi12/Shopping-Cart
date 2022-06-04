@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Shipping Cart</h1>
+    <p>Price Of item a is 650 <br> Quantity of item a is</p>
+    <input type="text" placeholder="item quantity of a" id="er">
+    <h2 id="gyt"></h2>
+    <p>Price Of item b is 90 <br>Quantity of item b is</p>
+    <input type="text" placeholder="item quantity of b" id="nj">
+    <h2 id="yk"></h2>
+    <p>Shipping Charges is 100</p>
+    <button onclick="submit()">Submit</button>
+    <h3>Total Cost Of Your Order is</h3>
+    <h1 id="mn"></h1>
+    <script>
+        function submit() {
+            let er = document.querySelector("#er").value
+            let result = Number(er) * 650;
+            console.log("result", result);
+            document.querySelector("#gyt").innerText = result;
+
+            let nj = document.querySelector("#nj").value
+            let result1 = Number(nj) * 90;
+            console.log("result1", result1);
+            document.querySelector("#yk").innerText = result1;
+
+            let mn = result + result1 + 100
+            console.log("mn", mn);
+            document.querySelector("#mn").innerText = mn;
+        }
+    </script>
+
+</body>
+
+</html>
